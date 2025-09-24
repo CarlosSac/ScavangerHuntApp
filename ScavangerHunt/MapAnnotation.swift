@@ -1,10 +1,9 @@
 //
 //  MapAnnotation.swift
-//  ScavengerHunt
+//  ScavangerHunt
 //
-//  Created by Debbie Hirshson on 1/19/25.
+//  Created by Carlos Sac on 9/23/25.
 //
-
 
 import UIKit
 import MapKit

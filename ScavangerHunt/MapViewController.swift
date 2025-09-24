@@ -1,27 +1,34 @@
 //
 //  MapViewController.swift
-//  ScavengerHunt
+//  ScavangerHunt
 //
-//  Created by Debbie Hirshson on 1/19/25.
+//  Created by Carlos Sac on 9/23/25.
 //
+
+
 import UIKit
 import MapKit
 import PhotosUI
 
 class MapViewController: UIViewController {
-    @IBOutlet private weak var completedLabelView: UILabel! //Task completeness (complete/incomplete)
-    @IBOutlet private weak var completedImageView: UIImageView! //Circle for task (filled == done, empty == not
-    @IBOutlet weak var descriptionLabel: UILabel! //task description
-    @IBOutlet weak var photoButton: UIButton! //attach photo
-    @IBOutlet private weak var mapView: MKMapView!
+    @IBOutlet weak var completedImageView: UIImageView!
+    @IBOutlet weak var completedLabelView: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var photoButton: UIButton! 
     
+    @IBOutlet weak var mapView: MKMapView!
     
     @IBOutlet weak var navTitle: UINavigationItem!
+    
     var task: Task!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if let t = task {
+            print("MapViewController.viewDidLoad — received task: \(t.title)")
+        } else {
+            print("MapViewController.viewDidLoad — task is nil")
+        }
         mapView.register(MapAnnotation.self, forAnnotationViewWithReuseIdentifier: MapAnnotation.identifier)
         mapView.heightAnchor.constraint(equalToConstant: 300).isActive = true
         
@@ -47,7 +54,7 @@ class MapViewController: UIViewController {
         
         descriptionLabel.text = task.description
         
-        let completedImage = UIImage(systemName: task.isComplete ? "circle.badge.checkmark" : "circle")
+        let completedImage = UIImage(systemName: task.isComplete ? "circle.inset.filled" : "circle")
         let color: UIColor = task.isComplete ? .systemGreen : .systemOrange
         completedImageView.image = completedImage?.withRenderingMode(.alwaysTemplate)
         completedImageView.tintColor = color

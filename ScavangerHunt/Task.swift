@@ -1,3 +1,11 @@
+//
+//  Task.swift
+//  ScavangerHunt
+//
+//  Created by Carlos Sac on 9/23/25.
+//
+
+
 import UIKit
 import CoreLocation
 
@@ -18,10 +26,19 @@ class Task{
         self.imageLocation = location
     }
 }
-extension Task{
-    static var mockHunts: [Task]{
+extension Task {
+    static var mockHunts: [Task] {
         return [
-            Task(title: "Your favorite park", description: "Where is your favorite park?"), Task(title: "Biggest Tree Around", description: "Where is the biggest tree?"), Task(title: "Local Mom & Pop Restaurant", description: "Where's the restaurant?")
+            Task(title: "Your favorite local restaurant 🍽️", description: "Visit and enjoy a meal at your favorite local restaurant."),
+            Task(title: "Your favorite local cafe ☕️", description: "Grab a coffee or tea at your favorite local cafe."),
+            Task(title: "Your favorite hiking spot 🥾", description: "Go for a hike at your favorite trail."),
+            Task(title: "Your favorite local park 🌳", description: "Take a walk or relax at your favorite park."),
+            Task(title: "Your favorite local museum 🏛️", description: "Explore exhibits at your favorite museum."),
+            Task(title: "Your favorite local bookstore 📚", description: "Browse books at your favorite bookstore."),
+            Task(title: "Your favorite local bakery 🥐", description: "Treat yourself at your favorite bakery.")
         ]
     }
 }
+
+
+
