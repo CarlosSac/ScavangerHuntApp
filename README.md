@@ -4,7 +4,7 @@ Submitted by: **Carlos Sac**
 
 **ScavangerHunt** is an app that let users to add photos to their favorite places
 
-Time spent: **6** hours spent in total
+Time spent: **7** hours spent in total
 
 ## Required Features
 
@@ -26,9 +26,7 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here is a reminder on how to embed Loom videos on GitHub. Feel free to remove this reminder once you upload your README. 
-
-[Guide]](https://www.youtube.com/watch?v=GA92eKlYio4) .
+<img src='demo.gif' title='Video Walkthrough' width='350' alt='Video Walkthrough' />
 
 ## Notes
 
